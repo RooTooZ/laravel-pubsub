@@ -122,11 +122,11 @@ class PubSubConnectionFactory
 
         $client = $this->container->makeWith('pubsub.gcloud.pub_sub_client', ['config' => $clientConfig]);
 
-        $clientIdentifier = array_get($config, 'client_identifier');
-        $autoCreateTopics = array_get($config, 'auto_create_topics', true);
-        $autoCreateSubscriptions = array_get($config, 'auto_create_subscriptions', true);
-        $backgroundBatching = array_get($config, 'background_batching', false);
-        $backgroundDaemon = array_get($config, 'background_daemon', false);
+        $clientIdentifier = Arr::get($config, 'client_identifier');
+        $autoCreateTopics = Arr::get($config, 'auto_create_topics', true);
+        $autoCreateSubscriptions = Arr::get($config, 'auto_create_subscriptions', true);
+        $backgroundBatching = Arr::get($config, 'background_batching', false);
+        $backgroundDaemon = Arr::get($config, 'background_daemon', false);
 
         if ($backgroundDaemon) {
             putenv('IS_BATCH_DAEMON_RUNNING=true');
