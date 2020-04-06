@@ -1,5 +1,5 @@
 {
-  "name": "superbalist/laravel-pubsub",
+  "name": "rootooz/laravel-pubsub",
   "description": "A Pub-Sub abstraction for Laravel",
   "license": "MIT",
   "authors": [
